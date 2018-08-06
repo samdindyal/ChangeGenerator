@@ -12,6 +12,8 @@
 		58C898D42118A237009FDB77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C898D22118A237009FDB77 /* Main.storyboard */; };
 		58C898D62118A238009FDB77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C898D52118A238009FDB77 /* Assets.xcassets */; };
 		58C898D92118A238009FDB77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C898D72118A238009FDB77 /* LaunchScreen.storyboard */; };
+		58C898E12118BC39009FDB77 /* ChangeGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C898E02118BC39009FDB77 /* ChangeGeneratorController.swift */; };
+		58C898E32118C596009FDB77 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C898E22118C596009FDB77 /* CoinCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		58C898D52118A238009FDB77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58C898D82118A238009FDB77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58C898DA2118A238009FDB77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58C898E02118BC39009FDB77 /* ChangeGeneratorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGeneratorController.swift; sourceTree = "<group>"; };
+		58C898E22118C596009FDB77 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				58C898CE2118A237009FDB77 /* AppDelegate.swift */,
 				58C898D02118A237009FDB77 /* ViewController.swift */,
 				58C898D22118A237009FDB77 /* Main.storyboard */,
+				58C898E02118BC39009FDB77 /* ChangeGeneratorController.swift */,
+				58C898E22118C596009FDB77 /* CoinCell.swift */,
 				58C898D52118A238009FDB77 /* Assets.xcassets */,
 				58C898D72118A238009FDB77 /* LaunchScreen.storyboard */,
 				58C898DA2118A238009FDB77 /* Info.plist */,
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C898D12118A237009FDB77 /* ViewController.swift in Sources */,
+				58C898E12118BC39009FDB77 /* ChangeGeneratorController.swift in Sources */,
+				58C898E32118C596009FDB77 /* CoinCell.swift in Sources */,
 				58C898CF2118A237009FDB77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
