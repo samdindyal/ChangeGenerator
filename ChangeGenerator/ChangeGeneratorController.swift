@@ -14,7 +14,7 @@ class ChangeGeneratorController: UITableViewController {
     var coins:[Coin]! {
         didSet {
             self.coins.sort { (a, b) -> Bool in
-                a.value > b.value
+                a.quantity >= b.quantity && a.value >= b.value
             }
         }
     }
@@ -30,8 +30,7 @@ class ChangeGeneratorController: UITableViewController {
         let coin = self.coins[row]
         cell.coinLabel.text = "\(coin.name)"
         cell.valueLabel.text = "$\(coin.value)"
-        cell.amountLabel.text = "x?"
-        
+        cell.amountLabel.text = "x\(coin.quantity)"
         
         return cell
     }
