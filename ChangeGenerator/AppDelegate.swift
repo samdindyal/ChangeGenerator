@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navController = window?.rootViewController as! UINavigationController
+        let changeGeneratorController = navController.topViewController as! ChangeGeneratorController
+        
+        changeGeneratorController.coins = [
+            Coin(name: "Penny", value: 0.01),
+            Coin(name: "Nickel", value: 0.05),
+            Coin(name: "Dime", value: 0.10 ),
+            Coin(name: "Quarter", value: 0.25)
+        ]
+        
         return true
     }
 
