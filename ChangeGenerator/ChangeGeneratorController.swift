@@ -18,6 +18,10 @@ class ChangeGeneratorController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        amountLabel.resignFirstResponder()
+    }
+    
     var coins:[Coin]! {
         didSet {
             self.coins.sort { (a, b) -> Bool in

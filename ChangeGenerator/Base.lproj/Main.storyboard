@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="5SD-CB-VeK">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,6 +57,7 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstItem="5cc-wX-bos" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5SD-CB-VeK" secondAttribute="leading" constant="8" id="AI2-RZ-x6P"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5cc-wX-bos" secondAttribute="trailing" constant="8" id="Pln-44-4ck"/>
@@ -66,6 +68,9 @@
                                 <constraint firstItem="GXl-gA-Grf" firstAttribute="top" secondItem="5SD-CB-VeK" secondAttribute="top" constant="8" id="qvj-ih-dHc"/>
                                 <constraint firstItem="5cc-wX-bos" firstAttribute="centerX" secondItem="GXl-gA-Grf" secondAttribute="centerX" id="zPg-yi-uVg"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Byr-q1-Olt" appends="YES" id="xew-zD-KOg"/>
+                            </connections>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="CoinCell" id="2C4-ka-AFd" customClass="CoinCell" customModule="ChangeGenerator" customModuleProvider="target">
@@ -111,10 +116,12 @@
                                         <constraint firstItem="uku-4b-8Fb" firstAttribute="centerY" secondItem="IlI-Y5-xuL" secondAttribute="centerY" id="rLl-LK-r75"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="amountLabel" destination="wNc-pb-IPc" id="lCI-9C-2Aw"/>
                                     <outlet property="coinLabel" destination="wVD-Td-jP2" id="v8g-jH-XAm"/>
                                     <outlet property="valueLabel" destination="XD6-pP-YmE" id="Hya-NN-Ep7"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ws8-ZR-1Nn" appends="YES" id="mZS-DR-qLp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,6 +136,16 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayI-yg-sfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Byr-q1-Olt">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="SRI-1t-YFN" id="JHI-1H-8xN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ws8-ZR-1Nn">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="SRI-1t-YFN" id="Y8M-Js-kFz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="38.423645320197046"/>
         </scene>
