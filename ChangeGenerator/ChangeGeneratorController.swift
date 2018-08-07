@@ -53,13 +53,16 @@ class ChangeGeneratorController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            let coin = coins[indexPath.row]
-            coin.active = !coin.active
-            cell.accessoryType = coin.active ? .checkmark : .none
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-        }
+        let coin = coins[indexPath.row]
+        coin.active = !coin.active
+        calculateCoinQuantites()
+        tableView.reloadRows(at: [indexPath], with: .automatic)
         
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let coin = coins[indexPath.row]
+        cell.accessoryType = coin.active ? .checkmark : .none
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,7 +88,8 @@ class ChangeGeneratorController: UITableViewController {
 
                 }
             }
+            
+            tableView.reloadData()
         }
-        tableView.reloadData()
     }
 }
