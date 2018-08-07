@@ -11,9 +11,11 @@ import UIKit
 class Coin {
     var name:String
     var value:Float
+    var quantity:Int
     
-    init(name: String, value: Float) {
-        self.name   = name
-        self.value  = value
+    init(name: String, value: Float, quantity: Int = 0) {
+        self.name       = name
+        self.value      = value
+        self.quantity   = quantity
     }
 }
