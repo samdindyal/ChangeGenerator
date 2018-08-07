@@ -14,6 +14,7 @@
 		58C898D92118A238009FDB77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C898D72118A238009FDB77 /* LaunchScreen.storyboard */; };
 		58C898E12118BC39009FDB77 /* ChangeGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C898E02118BC39009FDB77 /* ChangeGeneratorController.swift */; };
 		58C898E32118C596009FDB77 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C898E22118C596009FDB77 /* CoinCell.swift */; };
+		58C898E52119EC75009FDB77 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C898E42119EC75009FDB77 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		58C898DA2118A238009FDB77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58C898E02118BC39009FDB77 /* ChangeGeneratorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGeneratorController.swift; sourceTree = "<group>"; };
 		58C898E22118C596009FDB77 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		58C898E42119EC75009FDB77 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				58C898D02118A237009FDB77 /* ViewController.swift */,
 				58C898D22118A237009FDB77 /* Main.storyboard */,
 				58C898E02118BC39009FDB77 /* ChangeGeneratorController.swift */,
+				58C898E42119EC75009FDB77 /* Coin.swift */,
 				58C898E22118C596009FDB77 /* CoinCell.swift */,
 				58C898D52118A238009FDB77 /* Assets.xcassets */,
 				58C898D72118A238009FDB77 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				58C898D12118A237009FDB77 /* ViewController.swift in Sources */,
 				58C898E12118BC39009FDB77 /* ChangeGeneratorController.swift in Sources */,
 				58C898E32118C596009FDB77 /* CoinCell.swift in Sources */,
+				58C898E52119EC75009FDB77 /* Coin.swift in Sources */,
 				58C898CF2118A237009FDB77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
