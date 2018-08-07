@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChangeGeneratorController: UITableViewController {
+class ChangeGeneratorController: UITableViewController, UITextFieldDelegate {
     @IBOutlet var amountLabel:UITextField!
     
     @IBAction func amountChanged(_ sender: UITextField) {
@@ -91,5 +91,15 @@ class ChangeGeneratorController: UITableViewController {
             
             tableView.reloadData()
         }
+    }
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        let existingTextHasSeparator = textField.text?.range(of: ".")
+        let replacementTextHasSeparator = string.range(of: ".")
+        
+        return existingTextHasSeparator == nil || replacementTextHasSeparator == nil
     }
 }

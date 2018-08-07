@@ -43,6 +43,7 @@
                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             <connections>
                                                 <action selector="amountChanged:" destination="SRI-1t-YFN" eventType="editingChanged" id="pd6-DL-5FO"/>
+                                                <outlet property="delegate" destination="SRI-1t-YFN" id="ZTB-Z3-Kpq"/>
                                             </connections>
                                         </textField>
                                     </subviews>
