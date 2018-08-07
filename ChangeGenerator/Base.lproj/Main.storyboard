@@ -75,14 +75,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uku-4b-8Fb">
-                                            <rect key="frame" x="15.999999999999996" y="4" width="49.666666666666657" height="35.666666666666664"/>
+                                            <rect key="frame" x="16" y="4" width="76.333333333333329" height="35.666666666666664"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Coin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVD-Td-jP2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jjs-TZ-cya">
+                                                    <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Coin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVD-Td-jP2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNc-pb-IPc">
+                                                            <rect key="frame" x="53.333333333333329" y="0.0" width="23" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD6-pP-YmE">
                                                     <rect key="frame" x="0.0" y="24" width="26.666666666666668" height="11.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -91,21 +102,11 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNc-pb-IPc">
-                                            <rect key="frame" x="278.33333333333331" y="6.0000000000000018" width="40.666666666666686" height="31.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="wNc-pb-IPc" firstAttribute="centerY" secondItem="uku-4b-8Fb" secondAttribute="centerY" id="2ZF-kI-5Bf"/>
                                         <constraint firstItem="uku-4b-8Fb" firstAttribute="top" secondItem="IlI-Y5-xuL" secondAttribute="top" constant="4" id="4pB-oU-iEp"/>
                                         <constraint firstItem="uku-4b-8Fb" firstAttribute="leading" secondItem="IlI-Y5-xuL" secondAttribute="leading" constant="16" id="RWg-sK-5yj"/>
                                         <constraint firstAttribute="bottom" secondItem="uku-4b-8Fb" secondAttribute="bottom" constant="4" id="WsE-u4-Hua"/>
-                                        <constraint firstItem="wNc-pb-IPc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="uku-4b-8Fb" secondAttribute="trailing" constant="212.66666666666666" id="Z3j-fe-Ebn"/>
-                                        <constraint firstAttribute="trailing" secondItem="wNc-pb-IPc" secondAttribute="trailing" constant="16" id="g7P-Ut-T37"/>
-                                        <constraint firstAttribute="bottom" secondItem="wNc-pb-IPc" secondAttribute="bottom" constant="6" id="hYs-Wa-Fh8"/>
                                         <constraint firstItem="uku-4b-8Fb" firstAttribute="centerY" secondItem="IlI-Y5-xuL" secondAttribute="centerY" id="rLl-LK-r75"/>
                                     </constraints>
                                 </tableViewCellContentView>
