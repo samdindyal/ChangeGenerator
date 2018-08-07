@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Coin(name: "Quarter", value: 0.25)
         ]
         
+        changeGeneratorController.change = 1
+        
         return true
     }
 

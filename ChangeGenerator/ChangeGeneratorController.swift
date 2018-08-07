@@ -19,6 +19,14 @@ class ChangeGeneratorController: UITableViewController {
         }
     }
     
+    var change:Float!
+    var numberFormatter:NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coins.count
     }
@@ -33,5 +41,26 @@ class ChangeGeneratorController: UITableViewController {
         cell.amountLabel.text = "x\(coin.quantity)"
         
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        amountLabel.text = numberFormatter.string(from: NSNumber(value: self.change))
+        calculateCoinQuantites()
+    }
+    
+    func calculateCoinQuantites() {
+        if var change = self.change{
+        
+            for coin in coins {
+                coin.quantity = 0
+                if change >= coin.value {
+                    coin.quantity = Int(change/coin.value)
+                    change -= coin.value * Float(coin.quantity)
+                }
+            }
+        }
+        tableView.reloadData()
     }
 }
