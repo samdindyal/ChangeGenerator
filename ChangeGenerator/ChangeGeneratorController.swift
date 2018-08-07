@@ -47,7 +47,19 @@ class ChangeGeneratorController: UITableViewController {
         cell.valueLabel.text = "$\(coin.value)"
         cell.amountLabel.text = "x\(coin.quantity)"
         
+        cell.editingAccessoryType = coin.active ? .checkmark : .none
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            let coin = coins[indexPath.row]
+            coin.active = !coin.active
+            cell.accessoryType = coin.active ? .checkmark : .none
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,18 +69,20 @@ class ChangeGeneratorController: UITableViewController {
         calculateCoinQuantites()
     }
     
+    
     func calculateCoinQuantites() {
         if var change = self.change {
         
             for coin in coins {
                 coin.quantity = 0
-                if change >= coin.value {
+                if coin.active,
+                    change >= coin.value {
                     coin.quantity = Int(change/coin.value)
                     
                     // Force round to resolve rounding errors
                     change -= coin.value * Float(coin.quantity)
                     change = (round(change*100))/100.0
-                    print("CHANGE: \(change) QUANTITY: \(coin.quantity) VALUE: \(coin.value)")
+
                 }
             }
         }

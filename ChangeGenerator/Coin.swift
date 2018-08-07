@@ -12,10 +12,12 @@ class Coin {
     var name:String
     var value:Float
     var quantity:Int
+    var active:Bool
     
-    init(name: String, value: Float, quantity: Int = 0) {
+    init(name: String, value: Float, quantity: Int = 0, active: Bool = true) {
         self.name       = name
         self.value      = value
         self.quantity   = quantity
+        self.active     = active
     }
 }
