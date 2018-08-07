@@ -11,6 +11,13 @@ import UIKit
 class ChangeGeneratorController: UITableViewController {
     @IBOutlet var amountLabel:UITextField!
     
+    @IBAction func amountChanged(_ sender: UITextField) {
+        if let change = Float(self.amountLabel.text!) {
+            self.change = change
+            calculateCoinQuantites()
+        }
+    }
+    
     var coins:[Coin]! {
         didSet {
             self.coins.sort { (a, b) -> Bool in
@@ -51,13 +58,17 @@ class ChangeGeneratorController: UITableViewController {
     }
     
     func calculateCoinQuantites() {
-        if var change = self.change{
+        if var change = self.change {
         
             for coin in coins {
                 coin.quantity = 0
                 if change >= coin.value {
                     coin.quantity = Int(change/coin.value)
+                    
+                    // Force round to resolve rounding errors
                     change -= coin.value * Float(coin.quantity)
+                    change = (round(change*100))/100.0
+                    print("CHANGE: \(change) QUANTITY: \(coin.quantity) VALUE: \(coin.value)")
                 }
             }
         }
